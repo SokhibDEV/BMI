@@ -1,0 +1,122 @@
+.dashboard-page {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background: rgba(30, 30, 30, 0.6);
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grafik simulyatsiyasi (Barlar) */
+.mock-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.chart-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chart-row-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.chart-bar-bg {
+  background: #151515;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.chart-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+}
+
+.fill-purple { background: linear-gradient(90deg, #7c4dff, #a89bff); }
+.fill-green { background: linear-gradient(90deg, #00b0ff, #00d296); }
+
+/* Top mualliflar ro'yxati */
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.author-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-rank {
+  font-size: 12px;
+  font-weight: bold;
+  background: #2d2d2d;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #aaa;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.author-commits-count {
+  font-size: 13px;
+  color: #a89bff;
+  font-weight: bold;
+}

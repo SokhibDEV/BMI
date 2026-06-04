@@ -1,0 +1,183 @@
+.commits-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.commits-count {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 4px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px 14px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text);
+  outline: none;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+
+.filter-input::placeholder { color: var(--text-dim); }
+.filter-input:focus { border-color: rgba(99,84,255,0.5); }
+
+.filter-select {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 9px 14px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-select option { background: #0a0a0f; }
+
+.commit-list {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.commit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.commit-item:last-child { border-bottom: none; }
+.commit-item:hover { background: rgba(99,84,255,0.05); }
+
+.commit-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.commit-main { flex: 1; min-width: 0; }
+
+.commit-message {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.commit-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.commit-hash {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--purple-light);
+  background: var(--purple-bg);
+  border: 1px solid rgba(99,84,255,0.2);
+  border-radius: 6px;
+  padding: 2px 8px;
+  flex-shrink: 0;
+}
+
+.commit-changes {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.tag-added {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--green);
+  background: var(--green-bg);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.tag-removed {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--red);
+  background: var(--red-bg);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.commit-arrow {
+  color: var(--text-dim);
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.commit-item:hover .commit-arrow {
+  color: var(--purple-light);
+  transform: translateX(3px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.page-btn {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: var(--border-hover);
+  color: var(--purple-light);
+}
+
+.page-btn.active {
+  background: var(--purple-bg);
+  border-color: rgba(99,84,255,0.4);
+  color: var(--purple-light);
+}
+
+.page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
